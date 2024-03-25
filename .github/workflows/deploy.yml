@@ -18,14 +18,14 @@ jobs:
         with:
           node-version: "20.11"
 
-      - name: Build CSS from SCSS
+      - name: Compile SCSS to CSS
         run: npm run sass:build
 
       - name: Build and deploy
         run: |
           npm install
           npm run build
-          echo "Hello world"
+          echo "Build completed successfully"
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.2
