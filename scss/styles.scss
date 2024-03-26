@@ -3,6 +3,10 @@
   --list-background-color: rgba(0, 0, 0, 0.075);
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+}
+
 $whatsapp-color: #25d366;
 
 .xl-text {
@@ -118,6 +122,10 @@ $whatsapp-color: #25d366;
   left: -300px;
   top: 200px;
   opacity: 0.5;
+}
+
+.custom-btn1 {
+  white-space: nowrap;
 }
 
 .custom-btn1:hover {
@@ -406,6 +414,109 @@ $whatsapp-color: #25d366;
 }
 
 .general-contact-item-footer:hover {
+  color: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.show-more-custom {
+  white-space: nowrap;
+}
+
+.read-more-custom {
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.see-project-custom {
+  white-space: nowrap;
+  padding: 10px;
+}
+
+@media (max-width: 430px) {
+  .carousel-item-custom p {
+    font-size: 16px !important;
+  }
+  .carousel-inner-custom {
+    height: 360px;
+  }
+
+  .check-icon-custom {
+    font-size: 22px;
+    margin-right: 12px !important;
+  }
+
+  .list-item-custom {
+    padding-right: 12px;
+  }
+
+  .custom-container1 {
+    text-align: center;
+  }
+
+  .custom-container2 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .services {
+    padding-top: 10px !important;
+  }
+
+  .custom-list {
+    font-size: 1.2rem;
+  }
+
+  .custom-paragraph-services {
+    font-size: 1.3rem;
+    padding: 0 12px;
+  }
+
+  .custom-btn1 {
+    font-size: 1.2rem;
+  }
+
+  .custom-btn2 {
+    font-size: 1.2rem;
+  }
+
+  .custom-btn3 {
+    font-size: 1.2rem;
+  }
+
+  .img-product1 img {
+    width: 175px;
+  }
+
+  .custom-item {
+    color: #000;
+    margin-bottom: 0;
+  }
+
+  .modal-content {
+    padding: 2rem !important;
+  }
+
+  .custom-p {
+    color: #000;
+    margin-bottom: 0;
+  }
+  .custom-card {
+    width: 120px;
+    flex-basis: unset;
+  }
+  .gallery-image {
+    height: 120px;
+  }
+}
+
+.custom-paragraph {
+  font-size: 17px;
+}
+
+.custom-item {
   color: #000;
 }
 

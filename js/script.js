@@ -69,9 +69,19 @@ for (let i = 0; i < allOverlayElements.length; i++) {
 
 // Phone - Form - WhatsApp
 
-let widowWidth = window.innerWidth;
+let windowWidth = window.innerWidth;
 
-if (widowWidth > 430) {
+// Not displaying (=removing) hoover messages on screens below 430px
+
+// Selecting all the hoover messages
+const hooverMsg = document.querySelectorAll(".message-general");
+
+if (windowWidth <= 430) {
+  hooverMsg.forEach((item) => {
+    item.classList.add("d-none");
+  });
+}
+if (windowWidth > 430) {
   const callIcon = document.querySelector(".call-icon");
   const phoneText = document.querySelector(".phone-text");
 
@@ -286,98 +296,41 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Contactati-ne - index.html - trebuie sa duca pe contact.html si sa faca scroll
-
-document.addEventListener("DOMContentLoaded", function () {
-  if (
-    window.location.pathname === "/index.html" ||
-    window.location.pathname === "/"
-  ) {
-    const contactUsBtn = document.querySelector(".contact-us-btn");
-
-    contactUsBtn.addEventListener("click", function () {
-      const scrollPosition2 = 677;
-      sessionStorage.setItem("scrollPosition2", scrollPosition2);
-      window.location.href = "contact.html";
-    });
-  }
-
-  if (window.location.pathname === "/contact.html") {
-    const scrollPosition2 = sessionStorage.getItem("scrollPosition2");
-
-    if (scrollPosition2 !== null) {
-      window.scrollTo({
-        top: parseInt(scrollPosition2),
-        behavior: "smooth",
-      });
-      sessionStorage.removeItem("scrollPosition2");
-    }
-  }
-});
-
-// Afla mai mult - index.html - trebuie sa duca pe about.html si sa faca scroll
-
-document.addEventListener("DOMContentLoaded", function () {
-  if (
-    window.location.pathname === "/index.html" ||
-    window.location.pathname === "/"
-  ) {
-    const findOutMoreBtn = document.querySelector(".custom-btn1");
-
-    findOutMoreBtn.addEventListener("click", function () {
-      const scrollPosition3 = 453;
-      sessionStorage.setItem("scrollPosition3", scrollPosition3);
-      window.location.href = "about.html";
-    });
-  }
-
-  if (window.location.pathname === "/about.html") {
-    const scrollPosition3 = sessionStorage.getItem("scrollPosition3");
-
-    if (scrollPosition3 !== null) {
-      window.scrollTo({
-        top: parseInt(scrollPosition3),
-        behavior: "smooth",
-      });
-      sessionStorage.removeItem("scrollPosition3");
-    }
-  }
-});
-
 // index.html - "Afla mai mult" - Serviciile noastre - trebuie sa duca pe services.html si sa faca scroll
 
-document.addEventListener("DOMContentLoaded", function () {
-  if (
-    window.location.pathname === "/index.html" ||
-    window.location.pathname === "/"
-  ) {
-    const findOutMoreBtn2 = document.querySelector(".custom-btn2");
+// document.addEventListener("DOMContentLoaded", function () {
+//   if (
+//     window.location.pathname === "/index.html" ||
+//     window.location.pathname === "/"
+//   ) {
+//     const findOutMoreBtn2 = document.querySelector(".custom-btn2");
 
-    findOutMoreBtn2.addEventListener("click", function () {
-      const scrollPosition4 = 596;
-      sessionStorage.setItem("scrollPosition4", scrollPosition4);
-      window.location.href = "services.html";
-    });
-  }
+//     findOutMoreBtn2.addEventListener("click", function () {
+//       const scrollPosition4 = 596;
+//       sessionStorage.setItem("scrollPosition4", scrollPosition4);
+//       window.location.href = "services.html";
+//     });
+//   }
 
-  if (window.location.pathname === "/services.html") {
-    const scrollPosition4 = sessionStorage.getItem("scrollPosition4");
+//   if (window.location.pathname === "/services.html") {
+//     const scrollPosition4 = sessionStorage.getItem("scrollPosition4");
 
-    if (scrollPosition4 !== null) {
-      window.scrollTo({
-        top: parseInt(scrollPosition4),
-        behavior: "smooth",
-      });
-      sessionStorage.removeItem("scrollPosition4");
-    }
-  }
-});
+//     if (scrollPosition4 !== null) {
+//       window.scrollTo({
+//         top: parseInt(scrollPosition4),
+//         behavior: "smooth",
+//       });
+//       sessionStorage.removeItem("scrollPosition4");
+//     }
+//   }
+// });
 
 // Services - Show More Button
 const showMoreButton = document.querySelector(".inner-show-more-button");
 const concealableElements = document.querySelectorAll(".concealable");
+const controlHeader = document.querySelector(".control-header");
 
-if (window.location.pathname === "/services.html") {
+if (controlHeader.innerText === "Servicii și produse Plascosterm") {
   showMoreButton.addEventListener("click", function () {
     concealableElements.forEach((e) => {
       e.classList.toggle("d-none");
