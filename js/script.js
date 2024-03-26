@@ -283,32 +283,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Contactati-ne - index.html - trebuie sa duca pe contact.html si sa faca scroll
 
-document.addEventListener("DOMContentLoaded", function () {
-  if (
-    window.location.pathname === "/index.html" ||
-    window.location.pathname === "/"
-  ) {
-    const contactUsBtn = document.querySelector(".contact-us-btn");
+// document.addEventListener("DOMContentLoaded", function () {
+//   if (
+//     window.location.pathname === "/index.html" ||
+//     window.location.pathname === "/"
+//   ) {
+//     const contactUsBtn = document.querySelector(".contact-us-btn");
 
-    contactUsBtn.addEventListener("click", function () {
-      const scrollPosition2 = 677;
-      sessionStorage.setItem("scrollPosition2", scrollPosition2);
-      window.location.href = "contact.html";
-    });
-  }
+//     contactUsBtn.addEventListener("click", function () {
+//       const scrollPosition2 = 677;
+//       sessionStorage.setItem("scrollPosition2", scrollPosition2);
+//       window.location.href = "contact.html";
+//     });
+//   }
 
-  if (window.location.pathname === "/contact.html") {
-    const scrollPosition2 = sessionStorage.getItem("scrollPosition2");
+//   if (window.location.pathname === "/contact.html") {
+//     const scrollPosition2 = sessionStorage.getItem("scrollPosition2");
 
-    if (scrollPosition2 !== null) {
-      window.scrollTo({
-        top: parseInt(scrollPosition2),
-        behavior: "smooth",
-      });
-      sessionStorage.removeItem("scrollPosition2");
-    }
-  }
-});
+//     if (scrollPosition2 !== null) {
+//       window.scrollTo({
+//         top: parseInt(scrollPosition2),
+//         behavior: "smooth",
+//       });
+//       sessionStorage.removeItem("scrollPosition2");
+//     }
+//   }
+// });
 
 // Afla mai mult - index.html - trebuie sa duca pe about.html si sa faca scroll
 
@@ -401,6 +401,23 @@ const form = document.getElementById("form_modal");
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 });
+
+// make the navbar close when clicking anywhere outside of it
+
+// the body
+const theBody = document.querySelector("body");
+// the button in the navbar
+const theBtn = document.querySelector(".navbar-toggler");
+// the items in the navbar
+const theItems = document.querySelector(".navbar-collapse");
+
+theBody.addEventListener("click", function () {
+  theBtn.setAttribute("aria-expanded", "false");
+  theBtn.classList.remove("collapsed");
+  theItems.classList.remove("show");
+});
+
+theBody.addEventListener("click", function () {});
 
 // Event Listeners
 document.addEventListener("DOMContentLoaded", scrollFunction);

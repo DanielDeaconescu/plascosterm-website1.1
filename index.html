@@ -70,6 +70,10 @@
       </div>
     </nav>
 
+    <div class="major-overlay">
+      
+    </div>
+
     <!-- Header -->
     <header class="header position-relative mt-3 overflow-hidden">
       <img
@@ -443,22 +447,22 @@
 <!-- Form Modal -->
 <div class="project-modals">
   <div id="form_modal" class="modal fade">
-    <div class="modal-dialog modal-lg mt-7">
+    <div class="modal-dialog modal-md modal-lg mt-7">
       <div class="modal-content bg-light p-5">
         <div class="row justify-content-center">
           <div class="col-lg-6 col-md-12">
             <div class="text-container">
-              <h2>Solicita o Oferta de Pret</h2>
+              <h2 class="fs-4">Solicită o ofertă de preț</h2>
               <p class="custom-justify">
-                Completeaza formularul de mai jos si vom reveni cu un mesaj
-                catre tine in cel mai scurt timp.
+                Completează formularul de mai jos și vom reveni cu un mesaj
+                către tine în cel mai scurt timp.
               </p>
               <form
                 name="plascosterm_form"
                 action="https://formspree.io/f/xyyrdgev"
                 method="POST"
               >
-                <div class="mb-3">
+                <div class="mb-2">
                   <input
                     type="text"
                     class="form-control"
@@ -468,7 +472,7 @@
                   />
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-2">
                   <input
                     type="email"
                     class="form-control"
@@ -477,7 +481,7 @@
                   />
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-2">
                   <input
                     type="text"
                     class="form-control"
@@ -487,16 +491,16 @@
                   />
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-2">
                   <textarea
                     class="form-control"
-                    placeholder="Ex: preț inchidere balcon"
-                    rows="8"
+                    placeholder="De exemplu: preț închidere balcon"
+                    rows="4"
                     name="the_message"
                     required
                   ></textarea>
                 </div>
-                <div class="d-grid mb-3">
+                <div class="d-grid mb-2">
                   <button type="submit" class="btn btn-primary text-white">
                     Trimite
                   </button>
@@ -666,17 +670,17 @@
       <div class="phone-form-whatsapp">
       <!-- Phone -->
       <div class="phone d-flex justify-content-end align-items-center">
-        <div class="message-1 message-general bg-primary fw-bold p-3 rounded-3 text-white phone-text hidden text-nowrap fs-6">Apeleaza-ne acum</div>
-        <div class="icon-1 call-icon">
+        <div class="message-1 message-general bg-primary fw-bold p-3 rounded-3 text-white phone-text hidden text-nowrap fs-6">Apelează-ne acum</div>
+        <div class="icon-1 call-icon general-icon">
           <a href="tel:+40755171319">
             <i class="bi bi-telephone-fill text-primary form-button-custom"></i>
           </a>
         </div>
       </div>
       <!-- Form -->
-      <div class="form-custom d-flex justify-content-end align-items-center">
-        <div class="message-2 message-general bg-secondary fw-bold p-3 rounded-3 text-white form-text hidden text-nowrap fs-6">Completeaza formular</div>
-        <div class="icon-2 form-icon">
+      <div class="form-custom d-flex justify-content-end align-items-center mt-2 mb-2">
+        <div class="message-2 message-general bg-secondary fw-bold p-3 rounded-3 text-white form-text hidden text-nowrap fs-6">Completează formular</div>
+        <div class="icon-2 form-icon general-icon">
           <a data-bs-toggle="modal" data-bs-target="#form_modal">
             <i class="bi bi-chat-square-text text-warning form-button-custom"></i>
           </a>
@@ -685,7 +689,7 @@
       <!-- WhatsApp -->
       <div class="whatsapp d-flex justify-content-end align-items-center">
         <div class="message-3 message-general bg-success fw-bold p-3 rounded-3 text-white hidden whatsapp-text text-nowrap fs-6">Scrie-ne pe WhatsApp</div>
-        <div class="icon-3 whatsapp-btn">
+        <div class="icon-3 whatsapp-btn general-icon">
           <a href="https://wa.me/+40755171319">
             <i class="bi bi-whatsapp text-success form-button-custom"></i>
           </a>
@@ -702,6 +706,8 @@
       </div>
       
     </div>
+
+    
 
     <!-- Bootstrap JavaScript -->
     <script src="js/bootstrap.bundle.min.js"></script>

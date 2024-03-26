@@ -79,7 +79,7 @@
 
     <header class="mt-3">
       <div class="container text-center">
-        <img src="images/contact_header.jpg" alt="" />
+        <img class="img-fluid" src="images/contact_header.jpg" alt="" />
         <h1 class="mt-4">Informații de contact Plascosterm</h1>
         <p class="lead">
           Pentru a afla mai multe informații despre serviciile noastre și pentru
@@ -116,22 +116,33 @@
                   de contact.
                 </p>
                 <ul class="list-unstyled">
-                  <a href="">
+                  <a class="link-item-custom" href="tel:+40755171319">
                     <li class="contact-list-item p-2 text-dark d-flex">
                       <i class="fa-solid fa-phone-volume fa-2x"></i>
                       <p class="ms-3">0755 171 319</p>
                     </li>
                   </a>
-                  <li class="contact-list-item p-2 text-dark d-flex">
-                    <i class="fa-regular fa-envelope fa-2x"></i>
-                    <p class="ms-3">contact@plascosterm.com</p>
-                  </li>
-                  <li class="contact-list-item p-2 text-dark d-flex">
-                    <i class="fa-solid fa-location-pin fa-2x"></i>
-                    <p class="ms-3">
-                      Bloc SD7A, Bulevardul Siderurgiștilor 25, Galați 800480
-                    </p>
-                  </li>
+                  <a
+                    href="mailto: contact@plascosterm.com"
+                    class="link-item-custom"
+                  >
+                    <li class="contact-list-item p-2 text-dark d-flex">
+                      <i class="fa-regular fa-envelope fa-2x"></i>
+                      <p class="ms-3">contact@plascosterm.com</p>
+                    </li>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://maps.app.goo.gl/V6rpDup5BXkiFSbp7"
+                    class="link-item-custom"
+                  >
+                    <li class="contact-list-item p-2 text-dark d-flex">
+                      <i class="fa-solid fa-location-pin fa-2x"></i>
+                      <p class="ms-3">
+                        Bloc SD7A, Bulevardul Siderurgiștilor 25, Galați 800480
+                      </p>
+                    </li>
+                  </a>
                 </ul>
               </div>
             </div>
@@ -154,6 +165,7 @@
     </main>
 
     <!-- Form Modal -->
+    <!-- Form Modal -->
     <div class="project-modals">
       <div id="form_modal" class="modal fade">
         <div class="modal-dialog modal-lg mt-7">
@@ -161,7 +173,7 @@
             <div class="row justify-content-center">
               <div class="col-lg-6 col-md-12">
                 <div class="text-container">
-                  <h2>Solicită o Ofertă de Preț</h2>
+                  <h2 class="fs-4">Solicită o ofertă de preț</h2>
                   <p class="custom-justify">
                     Completează formularul de mai jos și vom reveni cu un mesaj
                     către tine în cel mai scurt timp.
@@ -171,7 +183,7 @@
                     action="https://formspree.io/f/xyyrdgev"
                     method="POST"
                   >
-                    <div class="mb-3">
+                    <div class="mb-2">
                       <input
                         type="text"
                         class="form-control"
@@ -181,7 +193,7 @@
                       />
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-2">
                       <input
                         type="email"
                         class="form-control"
@@ -190,7 +202,7 @@
                       />
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-2">
                       <input
                         type="text"
                         class="form-control"
@@ -200,16 +212,16 @@
                       />
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-2">
                       <textarea
                         class="form-control"
-                        placeholder="Ex: preț închidere balcon"
-                        rows="8"
+                        placeholder="De exemplu: preț închidere balcon"
+                        rows="4"
                         name="the_message"
                         required
                       ></textarea>
                     </div>
-                    <div class="d-grid mb-3">
+                    <div class="d-grid mb-2">
                       <button type="submit" class="btn btn-primary text-white">
                         Trimite
                       </button>

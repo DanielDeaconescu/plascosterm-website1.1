@@ -53,6 +53,15 @@ $whatsapp-color: #25d366;
   background: #fff;
   opacity: 1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.link-item-custom {
+  text-decoration: none;
+}
+
+.link-item-custom:hover {
+  cursor: pointer;
 }
 
 .details .decoration-star {
@@ -170,6 +179,12 @@ $whatsapp-color: #25d366;
   margin-right: 20px;
   padding: 1rem;
   border-radius: 10px;
+}
+
+.general-icon {
+  padding: 2%;
+  background-color: #eee;
+  border-radius: 50%;
 }
 
 .call-icon {
@@ -351,6 +366,7 @@ $whatsapp-color: #25d366;
 
 .contact-list-item:hover {
   background-color: var(--list-background-color);
+  cursor: pointer;
 }
 
 .show-more-btn {
