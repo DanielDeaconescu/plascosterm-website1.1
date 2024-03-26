@@ -51,61 +51,66 @@ for (let i = 0; i < allOverlayElements.length; i++) {
 
 // Display text when hovering the phone, icon and WhatsApp icons
 
-const allImages = document.querySelectorAll(".link-custom-style");
-const allOverlays = document.querySelectorAll(".link-overlay-text");
+// const allImages = document.querySelectorAll(".link-custom-style");
+// const allOverlays = document.querySelectorAll(".link-overlay-text");
+// console.log(allOverlays);
 
-// Making the overlay appear on hover
-for (let i = 0; i < allImages.length; i++) {
-  allImages[i].addEventListener("mouseover", function () {
-    allOverlays[i].classList.remove("hidden");
-    allOverlays[i].classList.add("visible");
-  });
-  allImages[i].addEventListener("mouseout", function () {
-    allOverlays[i].classList.remove("visible");
-    allOverlays[i].classList.add("hidden");
-  });
-}
+// // Making the overlay appear on hover
+// for (let i = 0; i < allImages.length; i++) {
+//   allImages[i].addEventListener("mouseover", function () {
+//     allOverlays[i].classList.remove("hidden");
+//     allOverlays[i].classList.add("visible");
+//   });
+//   allImages[i].addEventListener("mouseout", function () {
+//     allOverlays[i].classList.remove("visible");
+//     allOverlays[i].classList.add("hidden");
+//   });
+// }
 
 // Phone - Form - WhatsApp
 
-const callIcon = document.querySelector(".call-icon");
-const phoneText = document.querySelector(".phone-text");
+let widowWidth = window.innerWidth;
 
-callIcon.addEventListener("mouseover", function () {
-  phoneText.classList.remove("hidden");
-  phoneText.classList.add("visible");
-});
+if (widowWidth > 430) {
+  const callIcon = document.querySelector(".call-icon");
+  const phoneText = document.querySelector(".phone-text");
 
-callIcon.addEventListener("mouseout", function () {
-  phoneText.classList.remove("visible");
-  phoneText.classList.add("hidden");
-});
+  callIcon.addEventListener("mouseover", function () {
+    phoneText.classList.remove("hidden");
+    phoneText.classList.add("visible");
+  });
 
-const formIcon = document.querySelector(".form-icon");
-const formText = document.querySelector(".form-text");
+  callIcon.addEventListener("mouseout", function () {
+    phoneText.classList.remove("visible");
+    phoneText.classList.add("hidden");
+  });
 
-formIcon.addEventListener("mouseover", function () {
-  formText.classList.remove("hidden");
-  formText.classList.add("visible");
-});
+  const formIcon = document.querySelector(".form-icon");
+  const formText = document.querySelector(".form-text");
 
-formIcon.addEventListener("mouseout", function () {
-  formText.classList.remove("visible");
-  formText.classList.add("hidden");
-});
+  formIcon.addEventListener("mouseover", function () {
+    formText.classList.remove("hidden");
+    formText.classList.add("visible");
+  });
 
-const whatsappButton = document.querySelector(".whatsapp-btn");
-const whatsappText = document.querySelector(".whatsapp-text");
+  formIcon.addEventListener("mouseout", function () {
+    formText.classList.remove("visible");
+    formText.classList.add("hidden");
+  });
 
-whatsappButton.addEventListener("mouseover", function () {
-  whatsappText.classList.remove("hidden");
-  whatsappText.classList.add("visible");
-});
+  const whatsappButton = document.querySelector(".whatsapp-btn");
+  const whatsappText = document.querySelector(".whatsapp-text");
 
-whatsappButton.addEventListener("mouseout", function () {
-  whatsappText.classList.remove("visible");
-  whatsappText.classList.add("hidden");
-});
+  whatsappButton.addEventListener("mouseover", function () {
+    whatsappText.classList.remove("hidden");
+    whatsappText.classList.add("visible");
+  });
+
+  whatsappButton.addEventListener("mouseout", function () {
+    whatsappText.classList.remove("visible");
+    whatsappText.classList.add("hidden");
+  });
+}
 
 // Photo Gallery filter
 const allFilterButtons = document.querySelectorAll(".gallery-btn");
@@ -283,32 +288,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Contactati-ne - index.html - trebuie sa duca pe contact.html si sa faca scroll
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   if (
-//     window.location.pathname === "/index.html" ||
-//     window.location.pathname === "/"
-//   ) {
-//     const contactUsBtn = document.querySelector(".contact-us-btn");
+document.addEventListener("DOMContentLoaded", function () {
+  if (
+    window.location.pathname === "/index.html" ||
+    window.location.pathname === "/"
+  ) {
+    const contactUsBtn = document.querySelector(".contact-us-btn");
 
-//     contactUsBtn.addEventListener("click", function () {
-//       const scrollPosition2 = 677;
-//       sessionStorage.setItem("scrollPosition2", scrollPosition2);
-//       window.location.href = "contact.html";
-//     });
-//   }
+    contactUsBtn.addEventListener("click", function () {
+      const scrollPosition2 = 677;
+      sessionStorage.setItem("scrollPosition2", scrollPosition2);
+      window.location.href = "contact.html";
+    });
+  }
 
-//   if (window.location.pathname === "/contact.html") {
-//     const scrollPosition2 = sessionStorage.getItem("scrollPosition2");
+  if (window.location.pathname === "/contact.html") {
+    const scrollPosition2 = sessionStorage.getItem("scrollPosition2");
 
-//     if (scrollPosition2 !== null) {
-//       window.scrollTo({
-//         top: parseInt(scrollPosition2),
-//         behavior: "smooth",
-//       });
-//       sessionStorage.removeItem("scrollPosition2");
-//     }
-//   }
-// });
+    if (scrollPosition2 !== null) {
+      window.scrollTo({
+        top: parseInt(scrollPosition2),
+        behavior: "smooth",
+      });
+      sessionStorage.removeItem("scrollPosition2");
+    }
+  }
+});
 
 // Afla mai mult - index.html - trebuie sa duca pe about.html si sa faca scroll
 
