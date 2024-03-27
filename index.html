@@ -67,9 +67,7 @@
       </div>
     </nav>
 
-    <div class="major-overlay">
-      
-    </div>
+    <div class="control-header"></div>
 
     <!-- Header -->
     <header class="header position-relative mt-3 overflow-hidden">
@@ -215,22 +213,28 @@
               <div
                 class="col-md-4 d-flex flex-column align-items-center text-center"
               >
+              <a class="index-services-item" href="services.html">
                 <i class="fas fa-comments fa-4x text-secondary mb-2"></i>
                 <p class="fs-5 fw-bold">Consultație</p>
+              </a>
               </div>
 
               <div
                 class="col-md-4 d-flex flex-column align-items-center text-center"
               >
+              <a href="services.html" class="index-services-item">
                 <i class="fas fa-ruler fa-4x text-secondary mb-2"></i>
                 <p class="fs-5 fw-bold">Măsurători</p>
+              </a>
               </div>
 
               <div
                 class="col-md-4 d-flex flex-column align-items-center text-center"
               >
+              <a href="services.html" class="index-services-item">
                 <i class="fas fa-tools fa-4x text-secondary mb-2"></i>
                 <p class="fs-5 fw-bold">Montaj</p>
+              </a>
               </div>
 
               
@@ -239,21 +243,28 @@
               <div
                 class="col-md-4 d-flex flex-column align-items-center text-center"
               >
+              <a href="services.html" class="index-services-item">
                 <i class="fas fa-gear fa-4x text-secondary mb-2"></i>
                 <p class="fs-5 fw-bold">Reglaje</p>
+              </a>
               </div>
 
               <div
                 class="col-md-4 d-flex flex-column align-items-center text-center"
               >
+              <a href="services.html" class="index-services-item">
                 <i class="fas fa-hammer fa-4x text-secondary mb-2"></i>
                 <p class="fs-5 fw-bold">Reparații</p>
+              </a>
               </div>
               <div
                 class="col-md-4 d-flex flex-column align-items-center text-center"
               >
+              <a href="services.html" class="index-services-item">
                 <i class="fas fa-rotate fa-4x text-secondary mb-2"></i>
-                <p class="fs-5 fw-bold">Inlocuiri</p>
+                <p class="fs-5 fw-bold">Înlocuiri</p>
+              </a>
+                
               </div>
             </div>
           </div>
@@ -504,7 +515,7 @@
                 </div>
                 <div class="d-grid">
                   <button
-                    class="btn btn-secondary text-white"
+                    class="btn btn-secondary text-white cancel-btn-custom"
                     data-bs-dismiss="modal"
                   >
                     Anulează
@@ -519,7 +530,7 @@
   </div>
 </div>
 
-
+<!-- Footer -->
 <footer class="footer bg-light pt-6 pb-4">
   <div class="container">
     <div class="row">
@@ -527,8 +538,8 @@
         <h5 class="fw-bold">Despre Plascosterm</h5>
         <ul class="list-unstyled about_list">
           <li>
-            <i class="fa-solid fa-circle-check me-2"></i>Tâmplărie PVC și
-            Aluminiu
+            <i class="fa-solid fa-circle-check me-2"></i>
+            Tâmplărie PVC și Aluminiu
           </li>
           <li>
             <i class="fa-solid fa-circle-check me-2"></i>Servicii de montaj
@@ -546,8 +557,43 @@
           </li>
         </ul>
       </div>
+      
       <div class="col-md-4 my-3">
-        <h6>Parteneri Plascosterm</h6>
+        <h5>Contactați-ne</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a data-bs-toggle="modal" data-bs-target="#form_modal" class="d-flex align-items-center link-custom" href="#">
+              <!-- <i class="fa-solid fa-circle-check me-2"></i> -->
+              <i class="fa-regular fa-message fa-3x text-dark mx-2"></i>
+              Formular
+            </a>
+          </li>
+          <li>
+            <a class="d-flex align-items-center link-custom" href="https://wa.me/+40755171319">
+            <!-- <i class="fa-solid fa-circle-check me-2"></i> -->
+            <i class="fa-brands fa-whatsapp fa-3x text-dark mx-2 icon-custom"></i>
+            WhatsApp
+            </a>
+          </li>
+          <li class="d-flex align-items-center">
+            <a class="d-flex align-items-center link-custom" href="mailto:contact@plascosterm.com">
+            <!-- <i class="fa-solid fa-circle-check me-2"></i> -->
+            <i class="fa-solid fa-envelope fa-3x text-dark mx-2 icon-custom"></i>
+            Email
+            </a>
+          </li>
+        </ul>
+        <p>Trimite-ne un mesaj la 
+          <strong>
+            <a class="email-footer-custom" href="mailto:contact@plascosterm.com">
+            contact@plascosterm.com
+            </a>
+          </strong>
+        </p>
+      </div>
+
+      <div class="col-md-4 my-3">
+        <h5>Parteneri Plascosterm</h5>
         <ul class="list-unstyled">
           <li class="mb-4 d-flex flex-column">
             <img
@@ -566,97 +612,6 @@
             <a href="https://www.barrier.ro/">Maxima Ferestre</a>
           </li>
         </ul>
-      </div>
-      <div class="col-md-4 my-3">
-        <h6>Contactați-ne</h6>
-        <ul class="list-unstyled">
-          <li class="d-flex align-items-center justify-content-start">
-            <div class="row footer-item">
-              <div class="col-md-6 custom-width d-flex align-items-center">
-                <a
-                  class="general-contact-item-footer"
-                  data-bs-toggle="modal"
-                  data-bs-target="#form_modal"
-                >
-                  <span>Formular</span>
-                </a>
-              </div>
-              <div
-                class="col-md-6 custom-width d-flex align-items-center footer-icon-link"
-              >
-                <a
-                  data-bs-toggle="modal"
-                  data-bs-target="#form_modal"
-                  class="general-contact-item-footer"
-                >
-                  <span>
-                    <i
-                      class="fa-regular fa-message fa-3x text-dark mx-2"
-                    ></i>
-                  </span>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex align-items-center justify-content-start">
-            <div class="row footer-item">
-              <div class="col-md-6 custom-width d-flex align-items-center">
-                <a
-                  href="https://wa.me/+40755171319"
-                  class="general-contact-item-footer"
-                >
-                  <span>WhatsApp</span>
-                </a>
-              </div>
-              <div
-                class="col-md-6 custom-width d-flex align-items-center footer-icon-link"
-              >
-                <a
-                  href="https://wa.me/+40755171319"
-                  class="general-contact-item-footer"
-                >
-                  <span>
-                    <i
-                      class="fa-brands fa-whatsapp fa-3x text-dark mx-2"
-                    ></i>
-                  </span>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex align-items-center justify-content-start">
-            <div class="row footer-item">
-              <div class="col-md-6 custom-width d-flex align-items-center">
-                <a
-                  href="mailto:contact@site.com"
-                  class="general-contact-item-footer"
-                >
-                  <span>Email</span>
-                </a>
-              </div>
-              <div
-                class="col-md-6 custom-width d-flex align-items-center footer-icon-link"
-              >
-                <a
-                  href="mailto:contact@site.com"
-                  class="general-contact-item-footer"
-                >
-                  <span>
-                    <i
-                      class="fa-solid fa-envelope fa-3x text-dark mx-2"
-                    ></i>
-                  </span>
-                </a>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <p>
-          Trimite-ne un mesaj la
-          <a href="mailto:contact@site.com"
-            ><strong>contact@plascosterm.com</strong></a
-          >
-        </p>
       </div>
     </div>
   </div>

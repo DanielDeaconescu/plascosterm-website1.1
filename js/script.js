@@ -49,23 +49,23 @@ for (let i = 0; i < allOverlayElements.length; i++) {
   });
 }
 
-// Display text when hovering the phone, icon and WhatsApp icons
+// Technical information
 
-// const allImages = document.querySelectorAll(".link-custom-style");
-// const allOverlays = document.querySelectorAll(".link-overlay-text");
-// console.log(allOverlays);
+const allImages = document.querySelectorAll(".link-custom-style");
+const allOverlays = document.querySelectorAll(".link-overlay-text");
+console.log(allOverlays);
 
-// // Making the overlay appear on hover
-// for (let i = 0; i < allImages.length; i++) {
-//   allImages[i].addEventListener("mouseover", function () {
-//     allOverlays[i].classList.remove("hidden");
-//     allOverlays[i].classList.add("visible");
-//   });
-//   allImages[i].addEventListener("mouseout", function () {
-//     allOverlays[i].classList.remove("visible");
-//     allOverlays[i].classList.add("hidden");
-//   });
-// }
+// Making the overlay appear on hover
+for (let i = 0; i < allImages.length; i++) {
+  allImages[i].addEventListener("mouseover", function () {
+    allOverlays[i].classList.remove("hidden");
+    allOverlays[i].classList.add("visible");
+  });
+  allImages[i].addEventListener("mouseout", function () {
+    allOverlays[i].classList.remove("visible");
+    allOverlays[i].classList.add("hidden");
+  });
+}
 
 // Phone - Form - WhatsApp
 
@@ -337,8 +337,8 @@ if (controlHeader.innerText === "Servicii și produse Plascosterm") {
     });
 
     if (showMoreButton.innerHTML === "Arată mai mult") {
-      showMoreButton.innerHTML = "Mai puțin";
-    } else if (showMoreButton.innerHTML === "Mai puțin") {
+      showMoreButton.innerHTML = "Arată mai puțin";
+    } else if (showMoreButton.innerHTML === "Arată mai puțin") {
       showMoreButton.innerHTML = "Arată mai mult";
     }
   });
@@ -354,9 +354,9 @@ window.onbeforeunload = () => {
 
 // Prevent the default behavior of the form = when hitting the "Anuleaza" button, the form date will no longer be submitted
 
-const form = document.getElementById("form_modal");
+const cancelBtn = document.querySelector(".cancel-btn-custom");
 
-form.addEventListener("submit", function (event) {
+cancelBtn.addEventListener("submit", function (event) {
   event.preventDefault();
 });
 
