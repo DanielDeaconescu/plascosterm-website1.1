@@ -174,7 +174,9 @@ allFilterButtons.forEach((button) => {
 
 // projects.html - "Read More" buttons
 
-if (window.location.pathname === "/projects.html") {
+const wordCheck = "projects";
+
+if (window.location.href.indexOf(wordCheck) !== -1) {
   // the button
   const readMore1 = document.querySelector(".read_more1");
   // the paragraph
